@@ -1,6 +1,10 @@
 class WebhooksController < ApplicationController
+     skip_before_action :verify_authenticity_token, only: [:your_webhook_action]
+
 
 def receive_payload
+
+   binding.pry
 
     payload = JSON.parse(request.body.read)
 
