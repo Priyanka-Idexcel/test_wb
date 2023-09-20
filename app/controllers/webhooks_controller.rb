@@ -1,9 +1,6 @@
 class WebhooksController < ApplicationController
 
-
 def receive_payload
-
-   binding.pry
 
     payload = JSON.parse(request.body.read)
 
